@@ -36,11 +36,11 @@
 <meta name="viewport" content="width=320,initial-scale=1">
 ```
 
-    - width: define a largura da viewport;
-
-    - heigth: define a altura da viewport;
-
-    - initial-scale: define a escola inicial (zoom) inicial da *viewport*.
+    **width**: define a largura da viewport;
+    
+    **heigth**: define a altura da viewport;
+    
+    **initial-scale**: define a escola inicial (zoom) inicial da *viewport*.
 
 - Problema: para contemplar todos os dispositivos móveis, seria preciso conhecer a largura de cada um deles.
 
@@ -57,6 +57,7 @@
     width: 67.5% /* +/- 960 */
 }
 ```
+
 - Seria possível deixar responsivo para todos tipos de telas, colocando `width: 100%` no contêiner. Para projetos que precisam/queiram contar com largura total em quaisquer resoluções, seria o ideal.
 - Tamanho do `h1`: 32 (alvo) dividido por 16 (contexto) é igual a 2 (resultado). Como para fontes usamos a medida em `em`:
 ```html
@@ -64,12 +65,14 @@ h1 {
     font-size: 2em; /* 32 / 16 */
 }
 ```
+
 - Tamanho do `.content`: 15 dividido por 960 (a medida de nossa já finada largura fixa) é igual a 0.015625 (para trabalhar com porcentagem multiplicamos esse valor por 100).
 ```html
 .content {
     margin: 1.5625% 0; /* 15 / 960 */
 }
 ```
+
 - Tamanho do `.content-main`: não possui declaração explícita de largura, é preciso verificar o próximo elemento-ascendente (`.container`). Então nesse contexto, os 960 serão:
 ```html
 .content-main {
@@ -105,7 +108,8 @@ video {
 - Telas menores, muitas vezes resoluções não muito boas e velocidade de conexão inferior.
 - No caso de dispositivos mobile, é melhor que seja usada uma versão reduzida da imagem, de menor peso e tamanho.
 
-** Imagens de Alta Resolução:** seguir essas dicas trará benefícios em projetos que utilizam imagens em alta resolução.
+
+**Imagens de Alta Resolução:** seguir essas dicas trará benefícios em projetos que utilizam imagens em alta resolução.
 - Não fazer requisição da mesma imagem várias vezes.
 - Não usar cookie nem o elemento `<base>`.
 - Manipulação mínima do DOM.
@@ -131,39 +135,43 @@ Exemplo: podemos indicar um CSS somente para devices com tela de até 320px
 <link rel="stylesheet" media="screen and (max-width: 320px)" href="320.css">
 ```
 **Parâmetros para trabalhar com Media Queries**
+
 - **aspect-radio**: descreve a proporção da aŕea de exibição do browser usado.
-    ```html 
-    @media screen and (aspect-ratio: 16/9) { }
-    ```
+```html 
+@media screen and (aspect-ratio: 16/9) { }
+```
     
 - **color**: indica o número de birs por componente ede cor do dispositivo.
-    ```html 
-    @media all and (color) { }
-    ```
+```html 
+@media all and (color) { }
+```
 
 - **color index**: descreve o número de entradas na tabela de cores do dispositivo.
-    ```html
-    @media all and (color-index) { }
-    ```
+```html
+@media all and (color-index) { }
+```
     
 - **device-aspect-radio**: descreve a proporção do *display* do dispositivo.
-    ```html
-    @media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { }
-    ```
+```html
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { }
+```
     
 - **device-height**: descreve a altura (pixels) do *display* do aparelho.
-    ```html
-    @media screen and (max-device-height: 379px) { }
-    ```
+```html
+@media screen and (max-device-height: 379px) { }
+```
+    
 - **device-width**: descreve a largura (pixels) do *display* do aparelho.
-    ```html
-    @media screen and (max-device-width: 799px) { }
-    ```
+```html
+@media screen and (max-device-width: 799px) { }
+```
+
 - **grid**: determina se refere a um dispositivo de grade ou um dispositivo de mapa de bits (bitmap).
-    ```html
-    @media handheld and (grid) and (max-wdth: 15em) { }
-    ```
+```html
+@media handheld and (grid) and (max-wdth: 15em) { }
+```
+
 - **height**: altura (pixels) da janela do navegador sendo usado.
-    ```html
-    @media screen and @media height: 300px) { }
-    ```
+```html
+@media screen and @media height: 300px) { }
+```
