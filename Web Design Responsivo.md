@@ -35,10 +35,15 @@
 ```html
 <meta name="viewport" content="width=320,initial-scale=1">
 ```
+
     - width: define a largura da viewport;
+
     - heigth: define a altura da viewport;
+
     - initial-scale: define a escola inicial (zoom) inicial da *viewport*.
+
 - Problema: para contemplar todos os dispositivos móveis, seria preciso conhecer a largura de cada um deles.
+
     - Solução: inidicar ao navegador que o `width` da *meta tag viewport* é o tamanho da largura do dispositivo.
     ```html
     <meta name="viewport" content="width=device-width,initial-scale=1">
