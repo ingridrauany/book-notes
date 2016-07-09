@@ -36,11 +36,11 @@
 <meta name="viewport" content="width=320,initial-scale=1">
 ```
 
-    **width**: define a largura da viewport;
+**width**: define a largura da viewport;
     
-    **heigth**: define a altura da viewport;
+**heigth**: define a altura da viewport;
     
-    **initial-scale**: define a escola inicial (zoom) inicial da *viewport*.
+**initial-scale**: define a escola inicial (zoom) inicial da *viewport*.
 
 - Problema: para contemplar todos os dispositivos móveis, seria preciso conhecer a largura de cada um deles.
 
@@ -51,7 +51,7 @@
     
 **Alguns exemplos de conversão do layout fixo em fluído:**
 - Tamanho do `contêiner`. Exemplo:
-```html
+```css
 .container {
     margin: 0 auto;
     width: 67.5% /* +/- 960 */
@@ -60,21 +60,21 @@
 
 - Seria possível deixar responsivo para todos tipos de telas, colocando `width: 100%` no contêiner. Para projetos que precisam/queiram contar com largura total em quaisquer resoluções, seria o ideal.
 - Tamanho do `h1`: 32 (alvo) dividido por 16 (contexto) é igual a 2 (resultado). Como para fontes usamos a medida em `em`:
-```html
+```css
 h1 {
     font-size: 2em; /* 32 / 16 */
 }
 ```
 
 - Tamanho do `.content`: 15 dividido por 960 (a medida de nossa já finada largura fixa) é igual a 0.015625 (para trabalhar com porcentagem multiplicamos esse valor por 100).
-```html
+```css
 .content {
     margin: 1.5625% 0; /* 15 / 960 */
 }
 ```
 
 - Tamanho do `.content-main`: não possui declaração explícita de largura, é preciso verificar o próximo elemento-ascendente (`.container`). Então nesse contexto, os 960 serão:
-```html
+```css
 .content-main {
     float: left;
     width: 61.7708%; /* 593 (.content-main) / (.container) */
@@ -85,7 +85,7 @@ h1 {
 **CSS para imagens flexíveis:**
 - `max-width`: permite restringir larguras de conte 
 údo dentro de um determinado intervalo. No caso abaixo significaria que as imagens poderiam ter no máximo 100% de largura do elemento em que estão contidas.
-```html
+```css
 img {
     max-width: 100%;
 }
@@ -93,7 +93,7 @@ img {
 
 **CSS para outros recursos flexíveis:**
 - A mesma regra aplicada para as imagens, podem ser aplicadas para outros tipos de mídia e recursos, incluindo `iframe, object, embed` e `video`.
-```html
+```css
 img, 
 iframe, 
 object, 
@@ -137,41 +137,41 @@ Exemplo: podemos indicar um CSS somente para devices com tela de até 320px
 **Parâmetros para trabalhar com Media Queries**
 
 - **aspect-radio**: descreve a proporção da aŕea de exibição do browser usado.
-```html 
+```css
 @media screen and (aspect-ratio: 16/9) { }
 ```
     
 - **color**: indica o número de birs por componente ede cor do dispositivo.
-```html 
+```css 
 @media all and (color) { }
 ```
 
 - **color index**: descreve o número de entradas na tabela de cores do dispositivo.
-```html
+```css
 @media all and (color-index) { }
 ```
     
 - **device-aspect-radio**: descreve a proporção do *display* do dispositivo.
-```html
+```css
 @media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { }
 ```
     
 - **device-height**: descreve a altura (pixels) do *display* do aparelho.
-```html
+```css
 @media screen and (max-device-height: 379px) { }
 ```
     
 - **device-width**: descreve a largura (pixels) do *display* do aparelho.
-```html
+```css
 @media screen and (max-device-width: 799px) { }
 ```
 
 - **grid**: determina se refere a um dispositivo de grade ou um dispositivo de mapa de bits (bitmap).
-```html
+```css
 @media handheld and (grid) and (max-wdth: 15em) { }
 ```
 
 - **height**: altura (pixels) da janela do navegador sendo usado.
-```html
+```css
 @media screen and @media height: 300px) { }
 ```
