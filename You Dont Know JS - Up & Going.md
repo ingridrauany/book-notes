@@ -220,5 +220,14 @@ var x = function foo() {
 // "Hello!"
 ```
 
-#### Clasura
+#### Clausura
 Forma de *lembrar* e continuar acessando o escopo de uma função (e suas variáveis) mesmo se a função já estiver terminado de rodar.
+Clausuras permitem você guardar estado — de tal forma, elas podem ser frequentemente utilizadas no lugar de objetos.
+
+#### Módulos
+A forma de uso mais comum de um clausura (closure) em JavaScript é o padrão módulo (module pattern).
+
+
+
+#### Identificador `this`
+Se em uma função há uma referência ao `this`, geralmente esse `this` aponta para um objeto e não se refere a função propriamente dita.
