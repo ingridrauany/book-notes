@@ -231,3 +231,15 @@ A forma de uso mais comum de um clausura (closure) em JavaScript é o padrão m�
 
 #### Identificador `this`
 Se em uma função há uma referência ao `this`, geralmente esse `this` aponta para um objeto e não se refere a função propriamente dita.
+
+### Prototipagem
+
+Permite incluir definir propriedades, incluindo métodos. Assim, quando é feita uma referência a uma propriedade de objeto e a propriedade não exista, então o JavaScript usa a referência ao protótipo interno para achar outro objeto procurando pela propriedade em si.
+
+### Velho e Novo
+
+#### Pollyfilling
+Referencia uma nova propriedade que tem um código que tem comportamento equivalente, mas rode em ambiente JS antigo.
+
+#### Transpiling
+Converter o código em um código antigo equivalente.
