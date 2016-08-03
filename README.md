@@ -8,3 +8,5 @@ Notas sobre livros/artigos que tenho lido.
 
 ## JavaScript
 - [You Don't Know JS - Up & Going](https://github.com/ingridrauany/book-notes/blob/master/You%20Dont%20Know%20JS%20-%20Up%20%26%20Going.md)
+
+- [You Don't Know JS - Scope & Closures](https://github.com/ingridrauany/book-notes/blob/master/You%20Don't%20Know%20JS%20-%20Scope%20%26%20Closures.md)
