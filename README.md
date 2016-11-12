@@ -1,6 +1,6 @@
 # book-notes
 
-Notas sobre livros/artigos que tenho lido.
+Notas sobre o que tenho estudado.
 
 
 ## Responsividade
